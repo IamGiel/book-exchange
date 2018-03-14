@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+.card.horizontal {
+  width: 96% !important;
+  border-radius: 15px;
+
+}
+p {
+  margin: 0;
+  color: inherit;
+  text-align: justify;
+  width: 100%;
+  position: relative;
+  left: 2%;
+}
+body {
+  background: url("/assets/images/BlueParticles.mp4");
+  height: auto;
+  width: auto;
+}
+

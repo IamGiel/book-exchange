@@ -1,0 +1,42 @@
+.links{
+    font-size: 17px;
+}
+
+.navbar-brand{
+    font-size: 27px;
+}
+
+.navbar{
+  background-color: #3b6063b0;
+
+}
+body {
+  background-color: #fff9c4;
+}
+
+video{
+ /* opacity: 0.7; */
+  background-image: url("/assets/images/BlueParticles.mp4") center center / cover
+    no-repeat;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+  width: 100%;
+}
+
+
+ /* body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ } */
+

@@ -1,0 +1,240 @@
+// // ADDING SASS and MIXIN CODES
+// // Usage:   @include transition(width, height 0.3s ease-in-out);
+// // Output:  -webkit-transition(width 0.2s, height 0.3s ease-in-out);
+// //          transition(width 0.2s, height 0.3s ease-in-out);
+// //
+// // Pass in any number of transitions
+// @mixin transition($transitions...) {
+//   $unfoldedTransitions: ();
+//   @each $transition in $transitions {
+//     $unfoldedTransitions: append(
+//       $unfoldedTransitions,
+//       unfoldTransition($transition),
+//       comma
+//     );
+//   }
+
+//   -webkit-transition: $unfoldedTransitions;
+//   transition: $unfoldedTransitions;
+// }
+
+// @function unfoldTransition($transition) {
+//   // Default values
+//   $property: all;
+//   $duration: 0.5s;
+//   $easing: null; // Browser default is ease, which is what we want
+//   $delay: null; // Browser default is 0, which is what we want
+//   $defaultProperties: (
+//     $property,
+//     $duration,
+//     $easing,
+//     $delay
+//   );
+
+//   // Grab transition properties if they exist
+//   $unfoldedTransition: ();
+//   @for $i from 1 through length($defaultProperties) {
+//     $p: null;
+//     @if $i <= length($transition) {
+//       $p: nth($transition, $i);
+//     } @else {
+//       $p: nth($defaultProperties, $i);
+//     }
+//     $unfoldedTransition: append($unfoldedTransition, $p);
+//   }
+
+//   @return $unfoldedTransition;
+// }
+// // transitions  - end //
+
+// img {
+//   display: inline-block;
+//   position: relative;
+// }
+// .a {
+//   color:rgb(158, 92, 92);
+//   font-weight: 400;
+//   letter-spacing: 0.1em;
+// }
+// .a:hover {
+//   color: rgb(89, 89, 150);
+//   font-weight: 800;
+//   // height:100px;
+//   letter-spacing: 2em;
+//   @include transition(color 1s, letter-spacing 1s, font-weight 0.5s, height 0.5s ease-in-out);
+// }
+
+// // using keyframe animation
+
+// @keyframes slideInFromLeft {
+//   0% {
+//     transform: translateX(-100%);
+//   }
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+// .somethingAwesome {
+//    /* This section calls the slideInFromLeft animation we defined above */
+//   animation: 1s ease-out 0s 1 slideInFromLeft;
+
+//   padding: 10%;
+
+//   font-family: "Oswald", sans-serif;
+//   font-weight: 700;
+//   letter-spacing: 0.07em;
+//   transition: 5s;
+
+// }
+// .somethingAwesome:hover {
+//   color: $fontColor;
+//   letter-spacing: 1em;
+
+//   @include transition(letter-spacing 1s ease-out);
+// }
+
+// .menu-item {
+//   text-align: center;
+// }
+
+//start video styles
+
+// .slider {
+//   padding: 0px 10px 10px 10px;
+// }
+
+p {
+  text-align: center;
+  color: white;
+}
+
+.card-panel {
+  padding: 14px;
+  margin: -20% 0% 0% 0%;
+  border-radius: 30px;
+  width: 100%;
+  background-color: hsla(185, 25%, 31%, 0.69) !important;
+  top: -21em;
+  position: relative;
+}
+
+
+#container {
+  padding: 9em;
+  opacity: 0.7;
+  position: relative;
+  top: -5em;
+
+  #list {
+    // padding:1em;
+    display: block;
+    // margin-bottom:10px;
+  }
+}
+
+
+.welcome {
+
+  padding: 0;
+  position: relative;
+  top: 1em;
+  font-size: 40px;
+  height: 0em;
+  opacity: 1;
+  // @if height = 0em { opacity: 1;  }
+  // @if height = 1em { opacity: 0; }
+
+}
+
+.imageVideoScreenSettings {
+  height: auto;
+  width: auto;
+  top: 5px;
+  /* left: -1%; */
+  // opacity: 0.5;
+}
+
+video {
+  left: 46%;
+  margin-bottom: -10%;
+  margin-left: 4%;
+  width: 90%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translate(-50%, -28%);
+  z-index: 0;
+  opacity: 0.7;
+}
+
+// div.video-container {
+//   position: relative;
+//   margin-bottom: -85px;
+//   height: 100%;
+//   padding: 0%;
+// }
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .card-panel {
+    padding: 14px;
+    margin: -3% 0% 0% 0%;
+    border-radius: 30px;
+    width: 100%;
+    background-color: rgba(31, 144, 182, 0.623);
+  }
+}
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .card-panel {
+    padding: 4px;
+    margin: -27% 0% 0% -92%;
+    border-radius: 16px;
+    width: 229px;
+    background-color: #695a5a;
+  }
+  // div.video-container[_ngcontent-c1] {
+  //   position: relative;
+  //   margin-bottom: -120px;
+  //   height: 100%;
+  //   padding: 0%;
+  //   left: 19%;
+  //   width: 62%;
+  //   /* height: 105%; */
+  //   opacity: 0.5;
+  // }
+  .navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    height: 7em;
+  }
+  video[_ngcontent-c1] {
+    left: 65%;
+    margin-bottom: -10%;
+    margin-left: 4%;
+    width: 90%;
+    height: 100%;
+    position: relative;
+    -webkit-transform: translate(-50%, 3%);
+    opacity: 0.5;
+    z-index: 0;
+  }
+  #container {
+    padding: 13em;
+    opacity: 0.7;
+    font-size: 10px;
+    /* left: 9px; */
+    position: relative;
+    left: -1em;
+    border-radius: 10;
+  }
+  div.video-container[_ngcontent-c1] {
+    position: absolute;
+    margin-bottom: -85px;
+    height: 100%;
+    padding: 0%;
+    left: -26%;
+    width: 122%;
+    height: 55%;
+  }
+}

@@ -1,0 +1,15 @@
+
+/* .card.horizontal{
+  width: 97% !important;
+} */
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.card{
+  height: auto;
+  border-radius: 15px;
+}
+

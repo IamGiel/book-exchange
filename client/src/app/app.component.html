@@ -1,0 +1,62 @@
+<!-- <div class="navbar navbar-default">
+  <div class="container">
+    <div id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
+        <li *ngIf="auth.isLoggedIn()"><a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a></li>
+        <li *ngIf="auth.isLoggedIn()"><a (click)="auth.logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet> -->
+
+<nav class='navbar'>
+  <div class='container-fluid' @headerAnimate>
+    <a class='navbar-brand headerAnim'[routerLink]="['/']">{{pageTitle}}</a>
+    <ul id="nav-mobile" class="right library_Login">
+      <li>
+        <a class="links headerAnim" [routerLink]="['/library']">Library</a>
+      </li>
+      <li *ngIf="!auth.isLoggedIn()"><a class="links headerAnim" routerLink="/login">Sign in</a></li>
+      <li *ngIf="auth.isLoggedIn()"><a class="links headerAnim" routerLink="/profile">{{ auth.getUserDetails()?.name }}</a></li>
+      <li *ngIf="auth.isLoggedIn()"><a class="links headerAnim" (click)="auth.logout()">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+    <footer class="fixed-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <!-- <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> -->
+          <br><br>
+          </div>
+          <div class="col l4 offset-l2 s12">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<!-- <nav class="footerWrapper">
+  <div class="nav-wrapper">
+    <div class="brand-logo"></div>
+
+    <ul id="nav-mobile" class="right library_Login">
+    </ul>
+  </div>
+</nav> -->
+
+<video autoplay loop class="fillWidth enter">
+  <source src="../../assets/images/BlueParticles.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+  <!-- <source src="../../assets/images/BlueParticles.mp4" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser. --> -->
+</video>
+<!-- <script>
+  $('.carousel.carousel-slider').carousel({ fullWidth: true });
+</script> -->

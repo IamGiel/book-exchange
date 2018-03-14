@@ -1,0 +1,62 @@
+.col-md-12 {
+  width: 100%;
+  left: -15em;
+}
+
+.imageSize {
+  position: relative;
+  display: block;
+  // display: ;
+  width: 17em;
+  height: 25em;
+}
+
+#loginForm {
+  @extend .imageSize;
+  // width: 50%;
+  left: 39%;
+}
+#one {
+  @extend .imageSize;
+  left: 41em;
+  top: 0%;
+}
+#two {
+  left: 6%;
+  top: -25em;
+
+  @extend .imageSize;
+}
+#three {
+  margin-left: -5em;
+  // left: 2%;
+  left: 24em;
+  top: -22em;
+  // display: inline-block;
+  @extend .imageSize;
+}
+
+#four {
+  margin-left: -5em;
+  // left: 2%;
+  left: 34em;
+  top: -22em;
+  // display: inline-block;
+  @extend .imageSize;
+}
+#five {
+  margin-left: -5em;
+  // left: 2%;
+  left: 43em;
+  top: -22em;
+  // display: inline-block;
+  @extend .imageSize;
+}
+#six {
+  margin-left: -5em;
+  // left: 2%;
+  left: 14em;
+  top: -22em;
+  // display: inline-block;
+  @extend .imageSize;
+}
